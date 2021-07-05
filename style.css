@@ -1,0 +1,143 @@
+:root {
+    font-size: 14px;
+    --ff-all: "Raleway", sans-serif;
+    /* prim-color for gradient */
+    --clr-prim-grad1: hsl(6, 100%, 80%);
+    --clr-prim-grad2: hsl(335, 100%, 65%);
+    /* nuetral colors */
+    --clr-nue-pb: hsl(243, 100%, 93%);
+    --clr-nue-gb: hsl(229, 7%, 55%);
+    --clr-nue-db: hsl(228, 56%, 26%);
+    --clr-nue-vdb: hsl(229, 57%, 11%);
+    /* other colors */
+    --clr-other: hsl(0, 0%, 100%);
+}
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--ff-all);
+    background: url(./images/bg-mobile.png);
+    background-size: cover;
+}
+
+/* =======================
+    =======Layout ======== */
+
+.container {
+    margin: 8rem auto;
+    width: 85%;
+}
+
+.card {
+    padding: 2.5em 2em;
+    background-color: var(--clr-nue-db);
+    margin-bottom: 1.5em;
+    border-radius: 1em 8em 1em 1em;
+    box-shadow: 0 0 .1em var(--clr-nue-db);
+}
+
+.action__logo {
+    margin-bottom: 2em;
+}
+
+.action__icons {
+    width: 65%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.wrapper {
+    width: 28%;
+    padding: 1em;
+    background: var(--clr-nue-vdb);
+    border-radius: .7em;
+}
+
+.icon {
+    width: 100%;
+    margin: auto;
+}
+
+.storage-status {
+    border-top-right-radius: 1em;
+    position: relative;
+}
+
+.bar-container {
+    margin-bottom: .3em;
+    height: 1.3rem;
+    border-radius: 1em;
+    padding: .15em;
+    background: var(--clr-nue-vdb);
+}
+
+.bar {
+    width: 80%;
+    height: 100%;
+    padding: .15em;
+    border-radius: 1em;
+    background: linear-gradient(to right, var(--clr-prim-grad1), var(--clr-prim-grad2));
+    display: flex;
+    justify-content: flex-end;
+}
+
+.bar-circle {
+    width: 5%;
+    height: 100%;
+    border-radius: 50%;
+    background: var(--clr-other);
+}
+
+.bar-range {
+    display: flex;
+    justify-content: space-between;
+}
+
+.storage-left {
+    width: 40%;
+    text-align: center;
+    padding: .5em;
+    border-radius: .3em;
+    background: var(--clr-other);
+    position: absolute;
+    bottom: -35%;
+    left: 30%;
+}
+
+/* =======================
+    =======Typography ======== */
+
+.storage-status p {
+    margin-bottom: 1em;
+}
+
+.storage-used {
+    color: var(--clr-other);
+    text-align: center;
+}
+
+.storage-used span, .bar-range {
+    color: var(--clr-nue-pb);
+    font-weight: 700;
+}
+
+.bar-range {
+    font-size: .8rem;
+}
+
+.storage-left {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 2rem;
+    color: var(--clr-nue-vdb);
+}
+
+.storage-left span {
+    color: var(--clr-nue-gb);
+    font-size: .8rem;
+}
