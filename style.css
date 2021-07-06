@@ -87,9 +87,9 @@ body {
 }
 
 .bar-circle {
-    width: 5%;
+    min-width: 1em;
     height: 100%;
-    border-radius: 50%;
+    border-radius: 100%;
     background: var(--clr-other);
 }
 
@@ -140,4 +140,124 @@ body {
 .storage-left span {
     color: var(--clr-nue-gb);
     font-size: .8rem;
+}
+
+@media (min-width: 768px) {
+    body {
+        background: var(--clr-nue-vdb) url(./images/bg-desktop.png) no-repeat 0 25rem;
+        background-size: contain;
+    }
+    .action__icons {
+        justify-content: flex-start;
+        gap: 1em;
+        width: 40%;
+    }
+    .wrapper {
+        width: 20%;
+    }
+}
+
+@media (min-width: 1024px) {
+    body {
+        background: var(--clr-nue-vdb) url(./images/bg-desktop.png) no-repeat 0 20rem;
+        background-size: contain;
+    }
+    .container {
+        margin-top: 0;
+        width: 75%;
+        transform: translate(0, 90%);
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        gap: 2em;
+    }
+    .card {
+        padding: 2.5em 2.5em;
+    }
+    .action {
+        width: 38%;
+        height: 100%;
+    }
+    .action__icons {
+        width: 80%;
+    }
+    .wrapper {
+        width: 30%;
+    }
+    .storage-status {
+        width: 62%;
+    }
+    .storage-used {
+        font-size: .9rem;
+        text-align: left;
+    }
+    .bar-range {
+        font-size: 1rem;
+    }
+    .storage-left {
+        width: 32%;
+        padding: .4em;
+        bottom: 70%;
+        left: 60%;
+        font-size: 2rem;
+        text-align: center;
+    }
+    .storage-left span {
+        font-size: .7rem;
+    }
+    .storage-left::after {
+        content: "";
+        position: absolute;
+        left: 74%;
+        display: block;
+        transform: rotate(-90deg);
+        border-top: none;
+        border-left: 2rem solid transparent;
+        border-right: 2rem solid transparent;
+        border-bottom: 1.5rem solid var(--clr-other);
+    }
+}
+
+@media (min-width: 1366px) {
+    body {
+        background: var(--clr-nue-vdb) url(./images/bg-desktop.png) no-repeat 0 20rem;
+        background-size: cover;
+    }
+    .container {
+        width: 70%;
+        transform: translate(0, 90%);
+    }
+    .action {
+        width: 35%;
+    }
+    .action__icons {
+        width: 60%;
+    }
+    .wrapper {
+        width: 30%;
+    }
+    .storage-used {
+        font-size: 1rem;
+    }
+    .storage-left {
+        width: 25%;
+        left: 70%;
+        bottom: 60%;
+        font-size: 2.5rem;
+        padding: .2em;
+    }
+    .storage-left::after {
+        left: 74%;
+        bottom: 2%;
+    }
+}
+
+@media (min-width: 1440px) {
+    body {
+        background: var(--clr-nue-vdb) url(./images/bg-desktop.png) no-repeat 0 25rem;
+        background-size: cover;
+    }
+    .container {
+        transform: translate(0, 110%);
+    }
 }
